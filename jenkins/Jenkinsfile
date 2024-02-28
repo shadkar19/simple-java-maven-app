@@ -16,6 +16,13 @@ pipeline {
                 }
             }
         }
+
+        stage('DeliverStarted') {
+            steps {
+                echo 'Delivery Started'
+            }
+        }
+        
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
